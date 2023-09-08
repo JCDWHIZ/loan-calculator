@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <script defer src="loan.js"></script>
+  </head>
+  <body>
+    <div
+      class="col-md-4 mx-auto container card border-5 border-primary mt-4 bg-info"
+    >
+      <h1 class="mb-3 text-center">Loan Calculator</h1>
+      <form>
+        <div class="form-group">
+          <label for="loanAmount">Loan Amount:</label>
+          <input
+            type="number"
+            class="form-control rounded-pill"
+            id="loanAmount"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="interestRate">Interest Rate (%):</label>
+          <input
+            type="number"
+            class="form-control rounded-pill"
+            id="interestRate"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="loanTerm">Loan Term (Years):</label>
+          <input
+            type="number"
+            class="form-control rounded-pill"
+            id="loanTerm"
+            required
+          />
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="btn btn-primary ps-5 pe-5 mt-4 ms-4 col-md-10 mx-auto"
+            id="calculateBtn"
+          >
+            Calculate
+          </button>
+          <div id="loadingContainer" class="mt-4">
+            <!-- The loading image will be displayed here -->
+          </div>
+        </div>
+      </form>
+      <div id="result" class="mt-4">
+        <!-- The calculated result will be displayed here -->
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
